@@ -1,5 +1,4 @@
-import DefaultLayout from "@/components/layout/DefaultLayout";
-
+import DefaultLayout from '@/components/layout/DefaultLayout'
 
 export default function HomePage() {
   return (
@@ -8,5 +7,5 @@ export default function HomePage() {
         <h1 className="text-2xl font-bold mb-4">ㅎㅗㅁㅍㅔㅇㅣㅈㅣ</h1>
       </main>
     </DefaultLayout>
-  );
+  )
 }

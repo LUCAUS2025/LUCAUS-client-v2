@@ -1,30 +1,28 @@
-'use client';
+'use client'
 
-import React, { ReactNode } from 'react';
-import { TheFooter } from './TheFooter';
-import TheHeader from './TheHeader';
-import TheSidebar from './TheSidebar';
-import { MenuProvider } from '../context/MenuContext';
-import { HeaderProvider, useHeader } from '../context/HeaderContext';
+import React, { ReactNode } from 'react'
+import { TheFooter } from './TheFooter'
+import TheHeader from './TheHeader'
+import TheSidebar from './TheSidebar'
+import { MenuProvider } from '../context/MenuContext'
+import { HeaderProvider, useHeader } from '../context/HeaderContext'
 
 interface DefaultLayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const LayoutContent = ({ children }: DefaultLayoutProps) => {
-  const { hideHeader } = useHeader();
+  const { hideHeader } = useHeader()
 
   return (
     <div className="w-full max-w-[600px] md:w-[600px]">
       {!hideHeader && <TheHeader />}
       <TheSidebar />
-      <div className={`${hideHeader ? 'pt-0' : 'pt-16'} pb-16`}>
-        {children}
-      </div>
+      <div className={`${hideHeader ? 'pt-0' : 'pt-16'} pb-16`}>{children}</div>
       <TheFooter />
     </div>
-  );
-};
+  )
+}
 
 export default function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
@@ -35,5 +33,5 @@ export default function DefaultLayout({ children }: DefaultLayoutProps) {
         </HeaderProvider>
       </MenuProvider>
     </div>
-  );
+  )
 }

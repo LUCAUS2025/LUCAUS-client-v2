@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '2025 LUCAUS : 청람',
+  title: 'NEXT LUCAUS : 청람',
   description: '중앙대학교 루카우스 축제 사이트',
 }
 
